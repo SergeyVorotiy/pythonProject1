@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Load file - {{uniwordcount}}
+<form action="" enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
+    </form>
+wordcount - {{wordcount}}
+<form name="wordcount" action="" method="get">
+        {% csrf_token %}
+    <input name="wordcount" type="text">
+        <input type="submit" value="Save">
+    </form>
+clear-data
+<form name="clear" action="clear" method="post">
+        {% csrf_token %}
+        <input name="clear" type="submit" value="Save">
+    </form>
+
+</body>
+</html>
